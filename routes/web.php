@@ -45,3 +45,7 @@ Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
 //Subscriptions
 Route::get('/follow/{nickname}', 'SubscriptionController@create')->name('subscriptions.create');
 Route::get('/{nickname}', 'SubscriptionController@show')->name('subscriptions.show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

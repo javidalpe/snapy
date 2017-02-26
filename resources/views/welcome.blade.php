@@ -112,21 +112,20 @@
 
 
     <!-- Page Contents -->
-    <div class="pusher">
-        <div class="ui inverted vertical masthead center aligned segment" style="background:linear-gradient(60deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%)">
+    <div class="">
+        <div class="ui vertical masthead center aligned segment" style="background:linear-gradient(60deg,#CDDC39 15%,#FFEB3B 70%,#FFC107 94%)">
 
             @include('master.menu')
 
             <div style="">
                 <div class="ui text container">
-                    <h1 class="ui inverted header">
-                        Monetize your Instagram account
+                    <h1 class="ui header">
+                        Monetize your Snapchat account
                     </h1>
-                    <h2>Turn your account into premium.</h2>
-                    <a href="/register" class="ui white huge inverted button">Get Started <i class="right arrow icon"></i></a>
+                    <h2>Get paid for private snaps.</h2>
+                    <a href="/register" class="ui black huge button">Get Started <i class="right arrow icon"></i></a>
                 </div>
             </div>
-
         </div>
 
 
