@@ -4,7 +4,7 @@
 
     @if(!Auth::user()->account_id)
         <div class="ui message warning">
-            Setup your bank account to enable this rewards
+            Setup your bank account to enable thes rewards
         </div>
     @endif
 
