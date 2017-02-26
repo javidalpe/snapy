@@ -25,27 +25,19 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/verify', 'AccountController@edit')->name('account.edit');
     Route::put('/account', 'AccountController@update')->name('account.update');
     Route::resource('banks', 'BankController');
-    Route::post('/check', 'InstagramController@check')->name('instagram.check');
     Route::get('/balance', 'BalanceController@index')->name('balance.index');
 
-    //Follow
-    Route::get('/follow', 'SubscriptionController@index')->name('subscriptions.index');
-    Route::delete('/follow/{id}', 'SubscriptionController@destroy')->name('subscriptions.destroy');
-    Route::post('/follow/{nickname}', 'SubscriptionController@store')->name('subscriptions.store');
 
-    //logout
-    Route::post('/logout', function () { Auth::logout(); return redirect('/'); });
+    //Rewards
+    Route::resource('rewards', 'RewardController');
+
+    //Purchases
+    Route::get('/purchases', 'PurchaseController@index')->name('purchases.index');
+    Route::put('/purchases/{id}', 'PurchaseController@update')->name('purchases.update');
+
 });
-
-//Auth
-Route::get('/login', 'Auth\LoginController@redirectToProvider')->name('login');
-Route::get('/register', 'Auth\LoginController@redirectToProvider');
-Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
-
-//Subscriptions
-Route::get('/follow/{nickname}', 'SubscriptionController@create')->name('subscriptions.create');
-Route::get('/{nickname}', 'SubscriptionController@show')->name('subscriptions.show');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/{id}', 'PurchaseController@create')->name('purchases.create');
+Route::post('/{id}', 'PurchaseController@store')->name('purchases.store');

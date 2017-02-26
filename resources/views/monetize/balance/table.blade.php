@@ -13,14 +13,14 @@
         <tr>
           <td>{{ $item->type}}</td>
           <td>
-            @money($item->net)
+            @stripe($item->net)
           </td>
           <td>
-            @money($item->amount)
+            @stripe($item->amount)
           </td>
 
           <td>
-            (@money($item->fee))
+            (@stripe($item->fee))
           </td>
           <td>
              @date($item->available_on)
