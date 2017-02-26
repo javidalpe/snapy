@@ -26,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
           return '<?php $dt=new DateTime("@' . $epoch . '");echo($dt->format("Y-m-d")); ?>';
       });
 
+      Schema::defaultStringLength(191);
+
     }
 
     /**
