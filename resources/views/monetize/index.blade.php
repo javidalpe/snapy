@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <strong id="2">Setup your bank account</strong>
+    <strong>First, setup your bank account</strong>
     <small>Where you will recieve funds</small>
     @if($account && $account['transfers_enabled'])
         @include('master.components.done')

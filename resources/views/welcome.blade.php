@@ -120,6 +120,9 @@
 
             <div style="">
                 <div class="ui text container">
+
+                    @include('master.alerts')
+
                     <h1 class="ui header">
                         Monetize your Snapchat account
                     </h1>

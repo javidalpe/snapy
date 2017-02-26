@@ -2,11 +2,15 @@
 
 @section('content')
 
-
+    @if(!Auth::user()->account_id)
+        <div class="ui message warning">
+            Setup your bank account to enable this rewards
+        </div>
+    @endif
 
     @forelse (Auth::user()->rewards()->orderBy('amount', 'asc')->get() as $key => $value)
-        <div class="ui piled segments">
-        <div class="ui segment">
+        <div class="ui piled segments ">
+        <div class="ui segment {{ !Auth::user()->account_id ? "disabled":"" }}">
             <div class="ui tag labels">
                 <h4>{{ $value->description}}
                     <a class="ui label">
@@ -16,7 +20,7 @@
             </div>
         </div>
 
-        <div class="ui segment">
+        <div class="ui segment {{ !Auth::user()->account_id ? "disabled":"" }}">
             <div class="">
                 <p>Link to purchase this reward</p>
             </div>
@@ -48,12 +52,7 @@
                 <i class="circular dollar icon"></i>
                 You have no rewards
             </h2>
-
-            @if (Auth::user()->account_id)
-                <a href="{{ route('rewards.create') }}" class="ui aligned button center">Create your first reward</a>
-            @else
-                <a href="" class="ui aligned button center">Setup your bank account</a>
-            @endif
+            <a href="{{ route('rewards.create') }}" class="ui aligned button center">Create your first reward</a>
         </div>
 
     @endforelse
