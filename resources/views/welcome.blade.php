@@ -10,6 +10,7 @@
 
     <!-- Site Properties -->
     <title>{{ config('app.name') }}</title>
+    <meta name="description" content="Monetize your Snapchat account">
 
     <link rel="stylesheet" href="/css/semantic.min.css">
 

@@ -85,7 +85,7 @@ class PurchaseController extends Controller
 
             $reward->purchases()->save($purchase);
 
-            return redirect('');
+            return redirect('')->with('positive', 'Purchase completed.');
 
         }
         catch (\Stripe\Error\Base $e) {
@@ -130,7 +130,7 @@ class PurchaseController extends Controller
         $purchase = Purchase::find($id);
         $purchase->status = self::STATUS_DONE;
         $purchase->save();
-        
+
         return back();
     }
 
