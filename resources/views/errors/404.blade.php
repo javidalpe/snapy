@@ -86,36 +86,36 @@
 
     <!-- Page Contents -->
     <div class="pusher">
-        <div class="ui inverted vertical masthead center aligned segment" style="background:linear-gradient(60deg,#CDDC39 15%,#FFEB3B 70%,#FFC107 94%)">
+        <div class="ui vertical masthead center aligned segment" style="background:linear-gradient(60deg,#CDDC39 15%,#FFEB3B 70%,#FFC107 94%)">
 
             @include('master.menu')
 
             <div style="">
                 <div class="ui text container">
-                    <h1 class="ui inverted header">
+                    <h1 class="ui header">
                         Oops!
                     </h1>
                     <h2>We can't seem to find the page you're looking for.</h2>
                     <p>Error code: 404</p>
-                    <a href="/home" class="ui inverted button white">Home</a>
+                    <a href="/home" class="ui button white">Home</a>
                 </div>
             </div>
 
         </div>
 
 
-        <div class="ui inverted vertical footer segment">
+        <div class="ui vertical footer segment">
             <div class="ui container">
-                <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="ui stackable divided equal height stackable grid">
                     <div class="three wide column">
-                        <h4 class="ui inverted header">About</h4>
-                        <div class="ui inverted link list">
+                        <h4 class="ui header">About</h4>
+                        <div class="ui link list">
                             <a href="/terms" class="item">Terms and Conditions</a>
                             <a href="#" class="item">Contact Us</a>
                         </div>
                     </div>
                     <div class="seven wide column">
-                        <h4 class="ui inverted header"></h4>
+                        <h4 class="ui header"></h4>
                         <p>Copyright {{ config('app.name') }} 2017</p>
                     </div>
                 </div>
