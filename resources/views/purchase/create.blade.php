@@ -26,5 +26,8 @@
                 </div>
             </form>
         </div>
-
+        
+        <div style="margin-top:60px;text-align:center;">
+          <a href="/" style="color:grey">Monetize your own account...</a>
+        </div>
 @endsection
