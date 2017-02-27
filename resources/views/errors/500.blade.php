@@ -86,18 +86,18 @@
 
     <!-- Page Contents -->
     <div class="pusher">
-        <div class="ui inverted vertical masthead center aligned segment" style="background:linear-gradient(60deg,#CDDC39 15%,#FFEB3B 70%,#FFC107 94%)">
+        <div class="ui vertical masthead center aligned segment" style="background:linear-gradient(60deg,#CDDC39 15%,#FFEB3B 70%,#FFC107 94%)">
 
             @include('master.menu')
 
             <div style="">
                 <div class="ui text container">
-                    <h1 class="ui inverted header">
+                    <h1 class="ui header">
                         Internal Server Error
                     </h1>
                     <h2>Whoops, looks like something went wrong!</h2>
                     <p>Error code: 500</p>
-                    <a href="/home" class="ui inverted button white">Home</a>
+                    <a href="/home" class="ui button white">Home</a>
                 </div>
             </div>
 

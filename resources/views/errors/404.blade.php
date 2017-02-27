@@ -104,18 +104,18 @@
         </div>
 
 
-        <div class="ui vertical footer segment">
+        <div class="ui inverted vertical footer segment">
             <div class="ui container">
-                <div class="ui stackable divided equal height stackable grid">
+                <div class="ui stackable inverted divided equal height stackable grid">
                     <div class="three wide column">
-                        <h4 class="ui header">About</h4>
-                        <div class="ui link list">
+                        <h4 class="ui inverted header">About</h4>
+                        <div class="ui inverted link list">
                             <a href="/terms" class="item">Terms and Conditions</a>
                             <a href="#" class="item">Contact Us</a>
                         </div>
                     </div>
                     <div class="seven wide column">
-                        <h4 class="ui header"></h4>
+                        <h4 class="ui inverted header"></h4>
                         <p>Copyright {{ config('app.name') }} 2017</p>
                     </div>
                 </div>
