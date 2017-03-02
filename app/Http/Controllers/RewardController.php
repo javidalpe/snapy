@@ -37,6 +37,11 @@ class RewardController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'description' => 'required|between:4,140',
+            'amount' => 'required|digits_between:1,1000',
+        ]);
+
         $user = Auth::user();
         $user->rewards()->save(new Reward($request->all()));
 
