@@ -80,6 +80,7 @@
         </nav>
 
         @yield('content')
+        @include('master.footer')
     </div>
 
     <!-- Scripts -->
